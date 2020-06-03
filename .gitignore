@@ -1,0 +1,6 @@
+.*.swp
+shadow-cljs.edn
+.shadow-cljs
+build
+node_modules
+public/js
