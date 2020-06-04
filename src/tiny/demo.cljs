@@ -13,4 +13,19 @@
 (-> (t/$ "button") (t/attr "class" "primary"))
 (-> (t/$ "button") (t/evt "click" button-click))
 
-(defn main! [])
+(defn pinger []
+  (->
+    (js/fetch "https://blockstream.info/api/mempool")
+    (.then (fn [r] (.json r)))
+    (.then (fn [m]
+             (js/console.log m)
+             (js/console.log (aget m "count") (mod (aget m "count") 2))
+             (-> (t/$ "#mempool-count")
+                 (t/text (if
+                           (== (mod (aget m "count") 2) 1)
+                           "odd"
+                           "even")))
+             (js/setTimeout pinger 10000)))))
+
+(defn main! []
+  (pinger))
