@@ -1,4 +1,4 @@
-(ns tiny.core)
+(ns ultralight.core)
 
 (defn js-map [a f] (.map (js/Array.from a) f))
 (defn js-filter [a f] (.filter (js/Array.from a) f))
