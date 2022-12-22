@@ -9,11 +9,31 @@ With `cljs-ultralight` we try to achieve this dream:
 `cljs-ultralight` is a group of functions to help you keep your cljs builds tiny when building simple UIs.
 You can easily keep your bundle size under `1k` uncompressed with this.
 
+Here is a [blog post about making ClojureScript UIs in 500 bytes](https://mccormick.cx/news/entries/clojurescript-uis-in-500-bytes).
+
 # Usage
+
+## Install Clojure dep
 
 ```
 {:deps {io.github.chr15m/cljs-ultralight {:git/tag "LATEST-GIT-TAG" :git/sha "LATEST-GIT-SHA"}}}
 ```
+
+## Install with `npm`
+
+Alternatively you can use `npm` to install it into `node_modules`.
+
+```
+npm i cljs-ultralight
+```
+
+You'll have to manually add the sources in your `shadow-cljs.edn` if you use `npm` to install it.
+
+```clojure
+:source-paths [... "node_modules/cljs-ultralight/src"]
+```
+
+## Quick example
 
 ```clojure
 (ns myapp.core
