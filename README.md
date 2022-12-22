@@ -44,6 +44,11 @@ You'll have to manually add the sources in your `shadow-cljs.edn` if you use `np
            #(js/alert "Clicked!")))
 ```
 
+# Documentation
+
+The [source code is so small as to be self-documenting](https://github.com/chr15m/cljs-ultralight/blob/main/src/ultralight/core.cljs). 😅
+When this changes I will add more documentation.
+
 # Examples
 
 Check out [the demo](./src/ultralight/demo.cljs) for more examples.
