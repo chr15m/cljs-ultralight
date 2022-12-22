@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "shadow-cljs": "^2.9.10"
+    "shadow-cljs": "^2.20.15"
   },
   "scripts": {
     "build": "shadow-cljs release app",
