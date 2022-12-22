@@ -1,7 +1,5 @@
 (ns ultralight.core)
 
-(defn log [& args] (apply js/console.log (clj->js args)) (first args))
-
 (defn js-map [a f] (.map (js/Array.from a) f))
 (defn js-filter [a f] (.filter (js/Array.from a) f))
 
@@ -12,3 +10,5 @@
 (defn del [elements] (js-map elements (fn [el] (.remove el) el)))
 (defn evt [elements event callback] (js-map elements (fn [el] (.addEventListener el event callback))))
 
+; needs work ("variable arguments$ is undeclared")
+; (defn log [& _args] #(js/console.log.apply js/console js/arguments) (aget js/arguments 0))
