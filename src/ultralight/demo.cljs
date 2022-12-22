@@ -1,10 +1,8 @@
 (ns ultralight.demo
   (:require [ultralight.core :as u]))
 
-(js/console.log "hello")
-
 ; an event handler that updates a p tag's text
-(defn button-click [ev]
+(defn button-click [_ev]
   (let [entered-text (-> (u/$ "input") (aget 0) .-value)
         updated-text (.concat "Updated text: " entered-text)]
     (-> (u/$ "p")
