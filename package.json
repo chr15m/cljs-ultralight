@@ -1,5 +1,10 @@
 {
-  "dependencies": {
+  "name": "cljs-ultralight",
+  "version": "0.0.1",
+  "description": "Utilities for building small ClojureScript UI artifacts.",
+  "author": "Chris McCormick <chis@mccormick.cx>",
+  "homepage": "https://github.com/chr15m/cljs-ultralight",
+  "devDependencies": {
     "shadow-cljs": "^2.20.15"
   },
   "scripts": {
