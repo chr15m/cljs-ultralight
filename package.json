@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "shadow-cljs": "^2.9.10"
+  },
+  "scripts": {
+    "build": "shadow-cljs release app",
+    "size": "npm run build && du -h --apparent-size build/js/main.js",
+    "watch": "shadow-cljs watch app"
   }
 }
