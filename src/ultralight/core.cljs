@@ -3,8 +3,8 @@
 (defn js-map [a f] (.map (js/Array.from a) f))
 (defn js-filter [a f] (.filter (js/Array.from a) f))
 
-(defn $ [q & [el]] (.querySelector (or el js/document) q))
-(defn $$ [q & [el]] (.querySelectorAll (or el js/document) q))
+(defn $ [q] (.querySelector (or (aget (js* "arguments") 2) js/document) q))
+(defn $$ [q] (.querySelectorAll (or (aget (js* "arguments") 2) js/document) q))
 (defn text [elements txt] (js-map elements (fn [el] (aset el "textContent" txt) el)))
 (defn attr [elements k v] (js-map elements (fn [el] (.setAttribute el k v) el)))
 (defn del [elements] (js-map elements (fn [el] (.remove el) el)))
