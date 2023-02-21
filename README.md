@@ -39,7 +39,7 @@ You'll have to manually add the sources in your `shadow-cljs.edn` if you use `np
 (ns myapp.core
   (:require [ultralight.core :as u]))
 
-(-> (u/$ "#my-button")
+(-> (u/$$ "#my-button")
     (u/evt "click"
            #(js/alert "Clicked!")))
 ```
