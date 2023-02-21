@@ -1,6 +1,6 @@
 {
   "name": "cljs-ultralight",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utilities for making small ClojureScript UI artifacts.",
   "author": "Chris McCormick <chis@mccormick.cx>",
   "homepage": "https://github.com/chr15m/cljs-ultralight",
